@@ -5,7 +5,7 @@ In order to use this web service, you simply need to send a POST to something ak
 
 http://localhost:8049/onix-validator
 
-with the ONIX file's data as the content body of the request.  Since the ONIX format uses an external DTD or XSD file for validation (and since most files use an HTTP URL as the default reference), the first step of this program will replace the HTTP URL with a local one.  (These DTDs/XSDs should already be downloaded into a preset folder.)  A successful validation will return a HTTP code of 200, and an invalid ONIX data will return a value of 422, along with the error message.  Any other type of error will return a value of 400.
+with the ONIX file's data as the content body of the request.  Since the ONIX format uses an external DTD or XSD file for validation (and since most files use an HTTP URL as the default reference), the first step of each request will replace the HTTP URL with a local one.  (These DTDs/XSDs should already be downloaded into a preset folder.)  A successful validation will return a HTTP code of 200, and an invalid body of ONIX data will return a value of 422, along with the error message.  Any other type of error will return a value of 400.
 
 # NOTES
 
